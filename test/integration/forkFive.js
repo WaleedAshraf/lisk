@@ -1,9 +1,10 @@
 'use strict';
 
+var expect = require('chai').expect;
+var Promise = require('bluebird');
 var devConfig = require('../../config.json');
 var utils = require('./utils');
 var setup = require('./setup');
-var Promise = require('bluebird');
 
 describe('given configurations for nodes A, B, C running on ip "0.0.0.0" on ports 4000, 4001, 4002', function () {
 

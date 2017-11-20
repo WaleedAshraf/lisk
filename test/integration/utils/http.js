@@ -102,6 +102,9 @@ module.exports = {
 				secret: secret
 			}
 		}).then(function (res) {
+			if (!res.body.success) {
+				throw new Error('Unable to enable forging for delagate with secret: ' + secret);
+			}
 			return res.body.success;
 		});
 	}
